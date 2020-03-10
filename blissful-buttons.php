@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Blissful Buttons
  * Plugin URI:  https://sortabrilliant.com/blissfulbuttons
- * Description:
+ * Description: Boring buttons don't get clicked. 
  * Author:      sorta brilliant
  * Author URI:  https://sortabrilliant.com/
  * Version:     1.0.0
