@@ -1,13 +1,15 @@
-.is-style-soft {
+body .wp-block-button.is-style-soft,
+body .editor-styles-wrapper .wp-block-button.is-style-soft {
 
 	.wp-block-button__link {
 		color: #555;
-		background: #fff;
+		background-color: #fff;
 		display: inline-block;
 		padding: 20px 26px;
 		color: #555;
 		background: #fff;
 		font-size: 14px;
+		line-height: normal;
 		letter-spacing: 1px;
 		transition: all 0.4s ease-out;
 		text-decoration: none;
@@ -15,6 +17,10 @@
 		box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 20px;
 		text-transform: uppercase;
 		margin-right: 10px;
+
+		&:not(.has-background) {
+			background-color: #fff;
+		}
 
 		&:active {
 			box-shadow: transparent 3px 3px 10px, inset rgba(0, 0, 0, 0.1) 4px 4px 10px;
@@ -33,15 +39,18 @@
 	}
 }
 
-.is-style-offset {
+body .wp-block-button.is-style-offset,
+body .editor-styles-wrapper .wp-block-button.is-style-offset {
 
 	.wp-block-button__link {
 		color: #000;
-		background: #fff;
+		background-color: #fff;
 		display: inline-block;
 		padding: 6px 12px;
 		font-family: Menlo, Consolas, monaco, monospace;
 		font-weight: 900;
+		line-height: normal;
+		letter-spacing: normal;
 		border: solid 3px currentColor;
 		text-decoration: none;
 		font-size: 24px;
@@ -50,19 +59,25 @@
 		margin-right: 10px;
 		margin-bottom: 10px;
 
+		&:not(.has-background) {
+			background-color: #fff;
+		}
+
 		&:hover,
 		&:focus {
 			transform: translate(-5px, -5px);
 			box-shadow: 10px 10px 0 currentColor;
+			background-color: inherit;
 		}
 	}
 }
 
-.is-style-iyf {
+body .wp-block-button.is-style-iyf,
+body .editor-styles-wrapper .wp-block-button.is-style-iyf {
 
 	.wp-block-button__link {
 		color: #000;
-		background: #fff;
+		background-color: #fff;
 		display: inline-block;
 		padding: 10px 16px;
 		border-radius: 40px;
@@ -70,10 +85,16 @@
 		text-decoration: none;
 		font-weight: 900;
 		font-size: 24px;
+		line-height: normal;
+		letter-spacing: normal;
 		transition: all 0.1s ease-out;
 		box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0;
 		margin-right: 4px;
 		margin-bottom: 4px;
+
+		&:not(.has-background) {
+			background-color: #fff;
+		}
 
 		&:active {
 			transform: scale(0.9);
@@ -84,6 +105,7 @@
 		&:focus {
 			transform: scale(1.2);
 			box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 0px;
+			background-color: inherit;
 		}
 	}
 }

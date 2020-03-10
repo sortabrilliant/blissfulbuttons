@@ -50,4 +50,4 @@ function block_styles() {
 		VERSION
 	);
 }
-add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\block_styles' );
+add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\block_styles', 100 );
