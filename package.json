@@ -11,7 +11,7 @@
 	"main": "src/index.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sortabrilliant/blissful-buttons"
+		"url": "git+https://github.com/sortabrilliant/blissfulbuttons"
 	},
 	"scripts": {
 		"build": "wp-scripts build",
