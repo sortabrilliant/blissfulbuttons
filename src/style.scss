@@ -34,11 +34,11 @@
 }
 
 .is-style-soft {
-	--accent-color: #fff;
+	--accent-color: #555;
 
 	.wp-blissful-buttons__link {
-		color: #555;
-		background-color: var(--accent-color);
+		color: var(--accent-color);
+		background-color: #fff;
 		display: inline-block;
 		padding: 20px 26px;
 		font-size: 14px;
