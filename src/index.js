@@ -20,8 +20,7 @@ registerBlockType( name, {
 	example: {
 		attributes: {
 			className: 'is-style-offset',
-			textColor: 'purple',
-			text: 'Purple Button',
+			text: 'Blissful Button',
 		},
 	},
 	supports: {
@@ -29,8 +28,8 @@ registerBlockType( name, {
 		alignWide: true,
 	},
 	styles: [
-		{ name: 'offset', label: 'Offset', isDefault: true },
-		{ name: 'iyf', label: 'In Your Face' },
+		{ name: 'default', label: 'Default', isDefault: true },
+		{ name: 'offset', label: 'Offset' },
 		{ name: 'soft', label: 'Soft' },
 	],
 	category,
