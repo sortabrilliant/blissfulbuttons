@@ -19,10 +19,7 @@
 			"source": "html",
 			"selector": "a"
 		},
-		"backgroundColor": {
-			"type": "string"
-		},
-		"textColor": {
+		"accentColor": {
 			"type": "string"
 		},
 		"linkTarget": {

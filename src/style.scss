@@ -1,12 +1,13 @@
 .wp-block-sortabrilliant-blissful-buttons {
+	--accent-color: #000;
 
 	.wp-blissful-buttons__link {
-		color: #000;
+		color: var(--accent-color);
 		background-color: #fff;
 		display: inline-block;
 		padding: 10px 16px;
 		border-radius: 40px;
-		border: solid 3px currentColor;
+		border: solid 3px var(--accent-color);
 		text-decoration: none;
 		font-weight: 900;
 		font-size: 24px;
@@ -33,14 +34,13 @@
 }
 
 .is-style-soft {
+	--accent-color: #fff;
 
 	.wp-blissful-buttons__link {
 		color: #555;
-		background-color: #fff;
+		background-color: var(--accent-color);
 		display: inline-block;
 		padding: 20px 26px;
-		color: #555;
-		background: #fff;
 		font-size: 14px;
 		line-height: normal;
 		letter-spacing: 1px;
@@ -71,9 +71,10 @@
 }
 
 .is-style-offset {
+	--accent-color: #000;
 
 	.wp-blissful-buttons__link {
-		color: #000;
+		color: var(--accent-color);
 		background-color: #fff;
 		display: inline-block;
 		padding: 6px 12px;
@@ -81,11 +82,11 @@
 		font-weight: 900;
 		line-height: normal;
 		letter-spacing: normal;
-		border: solid 3px currentColor;
+		border: solid 3px var(--accent-color);
 		text-decoration: none;
 		font-size: 24px;
 		border-radius: 0;
-		box-shadow: 5px 5px 0 currentColor;
+		box-shadow: 5px 5px 0 var(--accent-color);
 		transition: all 0.15s;
 		margin-right: 10px;
 		margin-bottom: 10px;
@@ -93,7 +94,7 @@
 		&:hover,
 		&:focus {
 			transform: translate(-5px, -5px);
-			box-shadow: 10px 10px 0 currentColor;
+			box-shadow: 10px 10px 0 var(--accent-color);
 			text-decoration: none;
 		}
 	}

@@ -4,29 +4,19 @@
 import { RichText } from '@wordpress/block-editor';
 
 export default function save( { attributes } ) {
-	const {
-		backgroundColor,
-		linkTarget,
-		rel,
-		text,
-		textColor,
-		title,
-		url,
-	} = attributes;
+	const { linkTarget, rel, text, accentColor, title, url } = attributes;
 
 	const buttonStyle = {
-		backgroundColor,
-		color: textColor,
+		'--accent-color': accentColor,
 	};
 
 	return (
-		<div>
+		<div style={ buttonStyle }>
 			<RichText.Content
 				tagName="a"
 				className="wp-blissful-buttons__link"
 				href={ url }
 				title={ title }
-				style={ buttonStyle }
 				value={ text }
 				target={ linkTarget }
 				rel={ rel }

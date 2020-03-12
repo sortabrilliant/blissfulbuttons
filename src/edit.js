@@ -10,7 +10,6 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 import {
-	ContrastChecker,
 	InspectorControls,
 	PanelColorSettings,
 	RichText,
@@ -27,8 +26,7 @@ function BlissfulButtonsEdit( {
 	isSelected,
 } ) {
 	const {
-		backgroundColor,
-		textColor,
+		accentColor,
 		linkTarget,
 		placeholder,
 		rel,
@@ -62,19 +60,19 @@ function BlissfulButtonsEdit( {
 		[ rel, setAttributes ]
 	);
 
+	const buttonStyle = {
+		'--accent-color': accentColor,
+	};
+
 	const linkId = `wp-block-blissful-buttons__inline-link-${ instanceId }`;
 	return (
-		<div className={ className } title={ title }>
+		<div className={ className } title={ title } style={ buttonStyle }>
 			<RichText
 				placeholder={ placeholder || 'Add text…' }
 				value={ text }
 				onChange={ ( value ) => setAttributes( { text: value } ) }
 				withoutInteractiveFormatting
 				className="wp-blissful-buttons__link"
-				style={ {
-					backgroundColor,
-					color: textColor,
-				} }
 			/>
 			<BaseControl
 				label="Link"
@@ -100,31 +98,14 @@ function BlissfulButtonsEdit( {
 					title="Color Settings"
 					colorSettings={ [
 						{
-							value: backgroundColor,
+							value: accentColor,
 							onChange: ( newColor ) => {
-								setAttributes( { backgroundColor: newColor } );
+								setAttributes( { accentColor: newColor } );
 							},
-							label: 'Background Color',
-						},
-						{
-							value: textColor,
-							onChange: ( newColor ) => {
-								setAttributes( { textColor: newColor } );
-							},
-							label: 'Text Color',
+							label: 'Accent Color',
 						},
 					] }
-				>
-					<ContrastChecker
-						{ ...{
-							// Text is considered large if font size is greater or equal to 18pt or 24px,
-							// currently that's not the case for button.
-							isLargeText: false,
-							textColor,
-							backgroundColor,
-						} }
-					/>
-				</PanelColorSettings>
+				></PanelColorSettings>
 				<PanelBody title="Link settings">
 					<ToggleControl
 						label="Open in new tab"
