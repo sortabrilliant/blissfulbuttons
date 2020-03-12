@@ -12,7 +12,7 @@
 		font-weight: 900;
 		font-size: 24px;
 		line-height: normal;
-		text-decoration: none;
+		text-decoration: none !important;
 		letter-spacing: normal;
 		transition: all 0.1s ease-out;
 		box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 0;
@@ -26,7 +26,7 @@
 
 		&:hover,
 		&:focus {
-			text-decoration: none;
+			text-decoration: none !important;
 			transform: scale(1.2);
 			box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 0px;
 		}
@@ -45,7 +45,7 @@
 		line-height: normal;
 		letter-spacing: 1px;
 		transition: all 0.4s ease-out;
-		text-decoration: none;
+		text-decoration: none !important;
 		border-radius: 12px;
 		border: none;
 		box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 20px;
@@ -61,7 +61,7 @@
 
 		&:hover,
 		&:focus {
-			text-decoration: none;
+			text-decoration: none !important;
 			box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 30px;
 			opacity: 0.8;
 			transform: scale(1.05);
@@ -83,7 +83,7 @@
 		line-height: normal;
 		letter-spacing: normal;
 		border: solid 3px var(--accent-color);
-		text-decoration: none;
+		text-decoration: none !important;
 		font-size: 24px;
 		border-radius: 0;
 		box-shadow: 5px 5px 0 var(--accent-color);
@@ -95,7 +95,7 @@
 		&:focus {
 			transform: translate(-5px, -5px);
 			box-shadow: 10px 10px 0 var(--accent-color);
-			text-decoration: none;
+			text-decoration: none !important;
 		}
 	}
 }
