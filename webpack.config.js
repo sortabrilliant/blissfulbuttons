@@ -12,6 +12,7 @@ module.exports = {
 	entry: {
 		...defaultConfig.entry,
 
+		editor: path.resolve( process.cwd(), 'src', 'editor.scss' ),
 		style: path.resolve( process.cwd(), 'src', 'style.scss' ),
 	},
 

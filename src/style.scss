@@ -1,7 +1,7 @@
-body .wp-block-button.is-style-soft,
-body .editor-styles-wrapper .wp-block-button.is-style-soft {
+.wp-blissful-buttons,
+.is-style-soft {
 
-	.wp-block-button__link {
+	.wp-blissful-buttons__link {
 		color: #555;
 		background-color: #fff;
 		display: inline-block;
@@ -17,10 +17,6 @@ body .editor-styles-wrapper .wp-block-button.is-style-soft {
 		box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 20px;
 		text-transform: uppercase;
 		margin-right: 10px;
-
-		&:not(.has-background) {
-			background-color: #fff;
-		}
 
 		&:active {
 			box-shadow: transparent 3px 3px 10px, inset rgba(0, 0, 0, 0.1) 4px 4px 10px;
@@ -39,10 +35,9 @@ body .editor-styles-wrapper .wp-block-button.is-style-soft {
 	}
 }
 
-body .wp-block-button.is-style-offset,
-body .editor-styles-wrapper .wp-block-button.is-style-offset {
+.is-style-offset {
 
-	.wp-block-button__link {
+	.wp-blissful-buttons__link {
 		color: #000;
 		background-color: #fff;
 		display: inline-block;
@@ -59,23 +54,17 @@ body .editor-styles-wrapper .wp-block-button.is-style-offset {
 		margin-right: 10px;
 		margin-bottom: 10px;
 
-		&:not(.has-background) {
-			background-color: #fff;
-		}
-
 		&:hover,
 		&:focus {
 			transform: translate(-5px, -5px);
 			box-shadow: 10px 10px 0 currentColor;
-			background-color: inherit;
 		}
 	}
 }
 
-body .wp-block-button.is-style-iyf,
-body .editor-styles-wrapper .wp-block-button.is-style-iyf {
+.is-style-iyf {
 
-	.wp-block-button__link {
+	.wp-blissful-buttons__link {
 		color: #000;
 		background-color: #fff;
 		display: inline-block;
@@ -92,10 +81,6 @@ body .editor-styles-wrapper .wp-block-button.is-style-iyf {
 		margin-right: 4px;
 		margin-bottom: 4px;
 
-		&:not(.has-background) {
-			background-color: #fff;
-		}
-
 		&:active {
 			transform: scale(0.9);
 			box-shadow: inset rgba(0, 0, 0, 0.6) 1px 1px 0px;
@@ -105,7 +90,6 @@ body .editor-styles-wrapper .wp-block-button.is-style-iyf {
 		&:focus {
 			transform: scale(1.2);
 			box-shadow: rgba(0, 0, 0, 0.1) 6px 6px 0px;
-			background-color: inherit;
 		}
 	}
 }

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Blissful Buttons
  * Plugin URI:  https://sortabrilliant.com/blissfulbuttons
- * Description: Boring buttons don't get clicked. 
+ * Description: Boring buttons don't get clicked.
  * Author:      sorta brilliant
  * Author URI:  https://sortabrilliant.com/
  * Version:     1.0.0
@@ -14,40 +14,47 @@
 
 namespace SortaBrilliant\BlissfulButtons;
 
-const VERSION = '1.0.0';
-
 /**
- * Enqueue block editor assets.
+ * Registers the block and required assets.
  *
  * @return void
  */
-function editor_script() {
+function register_block() {
+	if ( ! function_exists( 'register_block_type' ) ) {
+		return;
+	}
+
 	$asset_filepath = __DIR__ . '/build/index.asset.php';
 	$asset_file     = file_exists( $asset_filepath ) ? include $asset_filepath : [
 		'dependencies' => [],
-		'version'      => VERSION,
+		'version'      => false,
 	];
 
-	wp_enqueue_script(
+	wp_register_script(
 		'blissful-buttons',
 		plugins_url( 'build/index.js', __FILE__ ),
 		$asset_file['dependencies'],
 		$asset_file['version']
 	);
-}
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\editor_script' );
 
-/**
- * Enqueue block styles.
- *
- * @return void
- */
-function block_styles() {
-	wp_enqueue_style(
+	wp_register_style(
+		'blissful-buttons-editor-style',
+		plugins_url( 'build/editor.css', __FILE__ ),
+		[],
+		$asset_file['version']
+	);
+
+	wp_register_style(
 		'blissful-buttons-style',
 		plugins_url( 'build/style.css', __FILE__ ),
 		[],
-		VERSION
+		$asset_file['version']
 	);
+
+	register_block_type( 'sortabrilliant/blissful-buttons', [
+		'editor_script'   => 'blissful-buttons',
+		'editor_style'    => 'blissful-buttons-editor-style',
+		'style'           => 'blissful-buttons-style',
+	] );
 }
-add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\block_styles', 100 );
+add_action( 'init', __NAMESPACE__ . '\\register_block' );
