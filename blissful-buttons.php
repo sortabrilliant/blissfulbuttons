@@ -1,13 +1,15 @@
 <?php
 /**
- * Plugin Name: Blissful Buttons
- * Plugin URI:  https://sortabrilliant.com/blissfulbuttons
- * Description: Boring buttons don't get clicked.
- * Author:      sorta brilliant
- * Author URI:  https://sortabrilliant.com/
- * Version:     1.0.1
- * License:     GPL-2.0-or-later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Plugin Name:       Blissful Buttons
+ * Plugin URI:        https://sortabrilliant.com/blissfulbuttons
+ * Description:       Boring buttons don't get clicked.
+ * Version:           1.0.2
+ * Requires at least: 5.0
+ * Requires PHP:      5.6
+ * Author:            sorta brilliant
+ * Author URI:        https://sortabrilliant.com/
+ * License:           GPL-2.0-or-later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  *
  * @package blissful-buttons
  */
