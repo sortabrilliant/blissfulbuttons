@@ -43,6 +43,11 @@ module.exports = {
 		...defaultConfig.plugins,
 		new MiniCssExtractPlugin( { filename: '[name].css' } ),
 		new OptimizeCssAssetsPlugin(),
-		new IgnoreEmitPlugin( [ 'style.js', 'style.asset.php' ] ),
+		new IgnoreEmitPlugin( [
+			'editor.js',
+			'style.js',
+			'editor.asset.php',
+			'style.asset.php',
+		] ),
 	],
 };
